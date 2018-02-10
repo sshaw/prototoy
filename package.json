@@ -1,0 +1,35 @@
+{
+  "name": "prototoy",
+  "version": "0.0.1",
+  "description": "Lightweight JavaScript object generator for your node REPL (or elsewhere, I suppose)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sshaw/prototoy.git"
+  },
+  "keywords": [
+    "repl",
+    "object",
+    "prototoy",
+    "prototype",
+    "generator",
+    "iterator",
+    "instance",
+    "toy",
+    "test",
+    "factory",
+    "mother"
+  ],
+  "author": "Skye Shaw <skye.shaw@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sshaw/prototoy/issues"
+  },
+  "homepage": "https://github.com/sshaw/prototoy#readme",
+  "devDependencies": {
+    "mocha": "^5.0.0"
+  }
+}
