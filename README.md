@@ -4,17 +4,19 @@
 
 Lightweight JavaScript object generator for your `node` REPL (or elsewhere, I suppose).
 
-## Installation
-
-`npm install prototoy` or `yarn install prototoy`
-
 ## Usage
 
 prototoy is not intended to be a full-fledged object generation library rather, it's
 intended for use in your Node.js REPL when you need a quick dummy object to toy around with.
 
-It's recommended that you load prototoy when you run `node` interactively. Here's one
-way to do it:
+It's recommended that you load prototoy when you run `node` interactively.
+How to do this depends on whether you want it available locally or globally.
+
+### Locally
+
+`npm install prototoy` or `yarn install prototoy`
+
+Now, load prototoy when you run `node` as a REPL in your project. Here's one way to do it:
 
 ```bash
 # In your shell's config (Bash here):
@@ -22,6 +24,22 @@ inode() {
   node -e 'const t = require("prototoy")' -i
 }
 ```
+
+
+### Globally
+
+`npm install prototoy -g` or `yarn install prototoy -g`
+
+Now, load prototoy when you run `node`. Here's one way to do it:
+
+```bash
+# In your shell's config (Bash here):
+inode() {
+  NODE_PATH=$(npm config get prefix)/lib/node_modules node -e 'const t = require("prototoy")' -i
+}
+```
+
+---
 
 Now you can easily generate objects to test things with:
 
