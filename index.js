@@ -1,3 +1,5 @@
+'use strict';
+
 // Make a property name of length n
 function makePropertyName(n) {
   const base = 26;
