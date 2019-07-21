@@ -65,6 +65,8 @@ assert.equal(obj.aa, 27, 'object(27).aa');
 obj = t.object(['foo', 'bar']);
 assert.deepStrictEqual(obj, {foo: 1, bar: 2});
 
+assert.equal(t.object, t.obj);
+
 /* iterator */
 assert.deepStrictEqual(Array.from(t.iterator()), arrayOf10Integers, 'iterator()');
 assert.deepStrictEqual(Array.from(t.iter(1)), [1], 'iter(1)');

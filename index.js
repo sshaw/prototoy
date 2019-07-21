@@ -132,6 +132,7 @@ let _defaultLength = 10, obj = {
   map: map,
   json: json,
   object: object,
+  obj: object,
   set: set,
   string: string
 };
