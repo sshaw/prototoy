@@ -79,7 +79,7 @@ Now you can easily generate objects to test things with:
 > i.next()
 { value: undefined, done: true }
 
-> i = t.iter(2, true)
+> i = t.iter(2, true)  // true means it will cycle
 {}
 > i.next()
 { value: 1, done: false }
