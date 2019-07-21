@@ -1,6 +1,6 @@
 {
   "name": "prototoy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight JavaScript object generator for your node REPL (or elsewhere, I suppose)",
   "main": "index.js",
   "scripts": {
