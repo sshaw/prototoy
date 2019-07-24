@@ -51,6 +51,10 @@ function array(count, generator) {
   return result;
 }
 
+function cycle(list) {
+  return iterator(list, true);
+}
+
 function json(properties) {
   return JSON.stringify(object(properties));
 }
@@ -127,14 +131,21 @@ function string(count) {
 
 let _defaultLength = 10, obj = {
   array: array,
+  a: array,
+  cycle: cycle,
   iter: iterator,
   iterator: iterator,
+  i: iterator,
   map: map,
+  m: map,
   json: json,
+  j: json,
   object: object,
   obj: object,
+  o: object,
   set: set,
-  string: string
+  string: string,
+  str: string
 };
 
 Object.defineProperty(obj, 'defaultLength', {

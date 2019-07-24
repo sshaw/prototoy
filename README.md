@@ -48,10 +48,10 @@ inode() {
 Now you can easily generate objects to test things with:
 
 ```
-> t.string(5)
+> t.string(5)  // or t.str() or t.s()
 'd zzzz ww uuuuuuu aa'
 
-> t.array()
+> t.array()    // or t.a()
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 > t.array(5, Date)
@@ -61,7 +61,7 @@ Now you can easily generate objects to test things with:
   2018-02-14T05:50:06.271Z,
   2018-02-15T05:50:06.271Z ]
 
-> t.obj()  // also t.object()
+> t.obj() // or t.o() or t.object()
 { a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10 }
 
 > t.obj(2)
@@ -70,7 +70,7 @@ Now you can easily generate objects to test things with:
 > t.obj(['foo', 'bar'])
 { foo: 1, bar: 2 }
 
-> i = t.iter(2)
+> i = t.iter(2) // or t.i()
 {}
 > i.next()
 { value: 1, done: false }
@@ -79,7 +79,7 @@ Now you can easily generate objects to test things with:
 > i.next()
 { value: undefined, done: true }
 
-> i = t.iter(2, true)  // true means it will cycle
+> i = t.iter(2, true)  // true means it will cycle; also: t.cycle()
 {}
 > i.next()
 { value: 1, done: false }
@@ -103,7 +103,7 @@ Now you can easily generate objects to test things with:
 { value: 'foo', done: false }
 ...
 
-> t.map(2)
+> t.map(2) // or t.m()
 Map { 'a' => 1, 'b' => 2 }
 
 > t.map(2, Number)
@@ -134,9 +134,15 @@ The function's signature is `callback(index)`, where `index` starts at `0`.
 
 An array.
 
+### `cycle([list])`
+
+Same as `iterator(list, true)`
+
 ### `json([properties])`
 
 Generate some JSON.
+
+Can also be called as `j`.
 
 #### Arguments
 
@@ -147,6 +153,8 @@ Generate some JSON.
 A JSON string.
 
 ### `map([spec  [, keyType [, valueType]]])`
+
+Can also be called as `m`.
 
 #### Arguments
 
@@ -162,6 +170,8 @@ An instance of `Map` populated according to the arguments.
 
 Generate an object with some properties.
 
+Can also be called as `o`.
+
 #### Arguments
 
 * `spec` - An integer representing the number of properties to add to the object or an array of property names to create.
@@ -170,10 +180,9 @@ Generate an object with some properties.
 
 An object as defined by `spec`.
 
-
 ### `iterator(spec, [cycle = false])`
 
-Create an [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). Can also be called as `iter`.
+Create an [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). Can also be called as `iter` or `i`.
 
 #### Arguments
 
@@ -192,6 +201,7 @@ Same arguments as [`array()`](#array), excepts it returns a `Set`.
 
 Return a string containing `length` words. `length` defaults to `defaultLength`.
 
+Can also be called as `s`.
 
 ## See Also
 
