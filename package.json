@@ -29,6 +29,7 @@
     "url": "https://github.com/sshaw/prototoy/issues"
   },
   "homepage": "https://github.com/sshaw/prototoy#readme",
+  "runkitExampleFilename": "runkitExample.js",
   "devDependencies": {
     "mocha": "^5.0.0"
   }
